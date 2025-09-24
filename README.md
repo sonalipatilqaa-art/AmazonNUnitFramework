@@ -1,4 +1,6 @@
 Overview
+
+
 This project is a C# Selenium WebDriver framework using NUnit for automated testing of the Amazon website. It includes a Page Object Model (POM) structure, ExtentReports integration for detailed HTML reports, and screenshot capture on test failures.
 Features
 Fully automated test cases for Amazon (at least 5 main pages)
@@ -8,6 +10,8 @@ ExtentReports for HTML reports
 Screenshot capture for failed steps
 Cross-browser support via Selenium WebDriver
 CI/CD ready (can integrate with GitHub Actions or Azure DevOps)
+
+
 Project Structure
 AmazonTests/
 │
@@ -20,6 +24,10 @@ AmazonTests/
 ├─ ExtentReportSetup.cs # ExtentReports initialization
 ├─ AmazonTests.csproj
 └─ .gitignore
+
+
+
+
 Installation
 Clone the repository
 git clone https://github.com/sonalipatilqaa-art/AmazonNUnitFramework.git
@@ -40,6 +48,8 @@ How to Use
 Tests are in the Tests folder.
 Each test automatically generates an ExtentReport in the working directory with screenshots.
 Page objects are in the Pages folder for easy maintenance.
+
+
 Example Test
 [Test]
 public void Test_SearchAndOpenFirstProduct()
@@ -53,7 +63,10 @@ public void Test_SearchAndOpenFirstProduct()
     var productPage = new ProductPage(driver);
     Assert.IsTrue(productPage.IsProductTitleDisplayed());
 }
+
+
 Notes
+
 Make sure Chrome or your preferred browser is installed.
 WebDriverManager automatically downloads the required ChromeDriver.
 .gitignore excludes all bin and obj folders to keep the repo clean.
